@@ -11,7 +11,7 @@
     <nav>
         <img src="./images/logo.png" alt="Logo" style="height: 40px; width: auto; margin-right: 10px;">
         <ul>
-            <li><a href="#about">About me</a></li>
+            <li><a href="#" onclick="scrollToAbout(); return false;">About me</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#certifications">Certifications</a></li>
             <li><a href="#documents">Documents</a></li>
@@ -21,26 +21,42 @@
   
     <section class="hero">
         <div class="hero-text">
+            <div></div>
               <button class = "nametag">John Louise R. Bergabeña</button>
             <h1>HI! I'M LOUISE</h1>
             <h2>I'M A DEVELOPER</h2>
             <p>Let's make your ideas come to life.</p>
+            <button class="hero-button"onclick="scrollToAbout()">Know More</button> 
+           <div class="socialscont"> 
+               <a class="socials" href="https://www.facebook.com/louise.bacus.5" target="_blank">
+    <img src="images/facebook.png" alt="Facebook">
+</a> 
+            <a class="socials" href="https://github.com/louiseee123" target="_blank">
+    <img src="images/github.png" alt="Facebook">
+</a>
+<a class="socials" href="https://www.youtube.com/@JohnLouiseBergabe%C3%B1a" target="_blank">
+    <img src="images/youtube.png" alt="Facebook">
+</a>
+            </div>
         </div>
         <img src="./images/prof.jpg" alt="Profile Picture" class="hero-image">
             <canvas id="particles-canvas"></canvas>
-            
-
+        
     </section>
+
     <div class="transition-strip"></div>
     <main>
+
         <section id="about">
     <div class="about-header">
         <h2 class="about-name">John Louise R. Bergabeña</h2>
         <p class="about-role">BSIT Undergraduate</p>
-    </div>
+    </div>  
+    <canvas id="particles-canvas"></canvas>
+    </section>
     
     <div class="about-content">
-        <p class="about-intro">[Brief introduction about yourself]</p>
+        <p class="about-intro">I am a Web Developer that focuses on making sleek, modern, and functional websites that fit your every need!</p>
         
         <div class="about-details">
             <div class="detail-card">

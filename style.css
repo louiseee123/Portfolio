@@ -356,6 +356,56 @@ nav ul li a.glow-underline::after {
      animation: fadeUp 0.8s ease-out 0.6s forwards;
      font-family: 'Segoe UI', 'Montserrat', system-ui, sans-serif;
 }
+.hero-button {
+    padding: 10px 15px;
+    background: transparent;
+    color: #7aa2f7;
+    border: 2px solid #7aa2f7;
+    border-radius: 30px;
+    font-size: .80rem;
+    font-weight: 600;
+    
+     opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease-out 0.8s forwards;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.hero-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(122, 162, 247, 0.2), transparent);
+    transition: left 0.5s ease;
+    z-index: -1;
+}
+
+.hero-button:hover {
+    background: rgba(122, 162, 247, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(122, 162, 247, 0.3);
+    border-color: #9ab7ff;
+    color: #9ab7ff;
+}
+
+.hero-button:hover::before {
+    left: 100%;
+}
+
+.hero-button:active {
+    transform: translateY(0);
+    transition: transform 0.1s ease;
+}
 
 
 @keyframes fadeUp {
@@ -371,6 +421,25 @@ nav ul li a.glow-underline::after {
     position: relative;
     z-index: 1;
 }
+.socials img {
+    margin-top: 20px;
+    width: 40px;
+    height: 40px;
+    margin-top: 0px;
+    margin-left: 15px;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease-out .8s forwards;
+     justify-content: center;
+    transition: opacity 0.3s ease;
+}
+.socialscont {
+    display: flex;
+    flex-direction: row;
+    margin-top: -40px;
+    margin-left: 125px;
+}
 
 
 
@@ -378,10 +447,13 @@ nav ul li a.glow-underline::after {
     justify-content: flex-start;
     margin-bottom: 60px;
     max-width: auto;
-    margin-left: -500px;
+    margin-left: -175px;
+    margin-top: 120px;
     margin-right: auto;
     padding-left: 20px;
 }
+
+
 
 .section-title {
     font-size: 1.5rem;
@@ -420,6 +492,8 @@ nav ul li a.glow-underline::after {
 .about-intro {
     font-size: 1.3rem;
     line-height: 1.8;
+    margin-top: -50px;
+    margin-left: -172px;
     margin-bottom: 60px;
     color: #c0c0ff;
     max-width: 800px;

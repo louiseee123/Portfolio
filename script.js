@@ -64,3 +64,16 @@ window.addEventListener('resize', () => {
 // Start
 initParticles();
 animateParticles();
+function scrollToAbout() {
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+        // Get the exact position of the about section
+        const offsetTop = aboutSection.offsetTop;
+        
+        // Smooth scroll to that position
+        window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+        });
+    }
+}
