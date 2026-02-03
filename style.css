@@ -523,8 +523,7 @@ nav ul li a.glow-underline::after {
 /* Detail cards */
 .about-details {
     display: grid;
-    justify-content: center;
-    grid-template-columns: minmax(250px, 1000px);
+    grid-template-columns: 1fr;
     gap: 30px;
     margin-top: 40px;
 }
@@ -699,7 +698,7 @@ nav ul li a.glow-underline::after {
 
 main {
     padding: 20px;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
