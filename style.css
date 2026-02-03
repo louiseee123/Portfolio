@@ -524,7 +524,7 @@ nav ul li a.glow-underline::after {
 .about-details {
     display: grid;
     justify-content: center;
-    grid-template-columns: minmax(250px, 800px);
+    grid-template-columns: minmax(250px, 1000px);
     gap: 30px;
     margin-top: 40px;
 }
@@ -583,11 +583,41 @@ nav ul li a.glow-underline::after {
 }
 
 .education-entry {
-    margin-bottom: 20px;
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 30px;
 }
 
 .education-entry:last-child {
     margin-bottom: 0;
+}
+
+.education-entry::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #3a86ff;
+    border: 2px solid #1f3a70;
+    z-index: 2;
+}
+
+.education-entry::after {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    bottom: -30px;
+    width: 2px;
+    background: rgba(58, 134, 255, 0.3);
+    z-index: 1;
+}
+
+.education-entry:last-child::after {
+    display: none;
 }
 
 .education-entry h4 {
