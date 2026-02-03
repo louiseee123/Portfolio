@@ -641,11 +641,44 @@ nav ul li a.glow-underline::after {
     border-left: 2px solid rgba(58, 134, 255, 0.3);
 }
 
-.education-entry h4 {
-    color: #e0e0ff;
-    font-size: 1.1rem;
+.education-date h4 {
+    color: #a0a0ff;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.education-degree {
+    font-size: 1.2rem;
     font-weight: 600;
-    margin-bottom: 5px;
+    color: #e0e0ff;
+    margin-bottom: 8px;
+}
+
+.education-school {
+    font-size: 1rem;
+    color: #c0c0ff;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.education-achievements {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #7aa2f7;
+    position: relative;
+    padding-left: 25px;
+}
+
+.education-achievements::before {
+    content: '\2605'; /* Star character */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #ffc107; /* Gold color for the star */
+    font-size: 1.2rem;
+    line-height: 1;
 }
 
 .detail-card p {
