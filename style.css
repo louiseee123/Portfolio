@@ -531,7 +531,7 @@ nav ul li a.glow-underline::after {
 .detail-card {
     background: rgba(26, 42, 78, 0.4);
     border-radius: 12px;
-    padding: 25px;
+    padding: 40px;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -583,7 +583,7 @@ nav ul li a.glow-underline::after {
 
 .education-entry {
     position: relative;
-    padding-left: 40px;
+    padding-left: 50px;
     margin-bottom: 30px;
 }
 
@@ -621,7 +621,7 @@ nav ul li a.glow-underline::after {
 
 .education-entry h4 {
     color: #e0e0ff;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 5px;
 }
@@ -629,14 +629,14 @@ nav ul li a.glow-underline::after {
 
 
 .detail-card p {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     font-weight: 500;
     color: #e0e0ff;
     margin-bottom: 5px;
 }
 
 .detail-sub {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #a0a0ff;
     font-weight: 400;
     opacity: 0.8;
