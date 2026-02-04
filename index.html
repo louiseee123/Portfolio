@@ -9,9 +9,98 @@
     <script src="background-particles.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="projects.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+/* Skills & Tools Section */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 15px;
+    padding: 15px 0;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(15, 30, 60, 0.5);
+    padding: 12px;
+    border-radius: 10px;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 1px solid rgba(122, 162, 247, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-item::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(122, 162, 247, 0.15) 0%, rgba(122, 162, 247, 0) 70%);
+    transition: all 0.6s ease;
+    transform: scale(0);
+}
+
+.skill-item:hover::before {
+    transform: scale(1);
+}
+
+.skill-item:hover {
+    transform: translateY(-8px);
+    border-color: rgba(122, 162, 247, 0.4);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+    background: rgba(20, 40, 70, 0.7);
+}
+
+.skill-logo {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 6px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: drop-shadow(0 0 4px rgba(122, 162, 247, 0.5));
+}
+
+.skill-item:hover .skill-logo {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 10px rgba(122, 162, 247, 0.9));
+}
+
+.skill-item span {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #e0e0ff;
+    transition: color 0.3s ease;
+}
+
+.skill-item:hover span {
+    color: #ffffff;
+}
+
+/* Font Awesome icons styling (for existing skills) */
+.skill-item i {
+    font-size: 28px;
+    margin-bottom: 6px;
+    color: #7aa2f7;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 6px rgba(122, 162, 247, 0.6);
+}
+
+.skill-item:hover i {
+    color: #9ab7ff;
+    transform: scale(1.15);
+    text-shadow: 0 0 12px rgba(122, 162, 247, 1);
+}
+    </style>
 </head>
 <body>
     <nav>
@@ -109,7 +198,7 @@
                         </div>
                         <div class="education-info">
                             <p class="education-degree">Junior High School</p>
-                            <p class="education-school">West Bay Learning Center, Sagkahan National High School</p>
+                            <p class="education-school">West Bay Learning Center, Sagkahan High School</p>
                             <p class="education-achievements">Consistent Honor Student</p>
                         </div>
                     </div>
@@ -125,9 +214,100 @@
                     </div>
                 </div>
             </div>
-            <div class="detail-card placeholder-card">
-                <h3>Placeholder</h3>
-                <p>This is a placeholder card. You can add any content you like here.</p>
+            <div class="detail-card skills-card">
+                <h3>Skills & Tools</h3>
+
+                <h4>Languages</h4>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <img src="https://cdn.simpleicons.org/html5/FFFFFF" alt="HTML5" class="skill-logo"/>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.simpleicons.org/css3/FFFFFF" alt="CSS3" class="skill-logo"/>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.simpleicons.org/javascript/FFFFFF" alt="JavaScript" class="skill-logo"/>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.simpleicons.org/python/FFFFFF" alt="Python" class="skill-logo"/>
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.simpleicons.org/sqlite/FFFFFF" alt="SQL" class="skill-logo"/>
+                        <span>SQL</span>
+                    </div>
+                     <div class="skill-item">
+                        <img src="https://cdn.simpleicons.org/java/FFFFFF" alt="Java" class="skill-logo"/>
+                        <span>Java</span>
+                    </div>
+                </div>
+
+                <h4>Frameworks</h4>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <img src="https://cdn.simpleicons.org/react/FFFFFF" alt="React.js" class="skill-logo"/>
+                        <span>React.js</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.simpleicons.org/tailwindcss/FFFFFF" alt="Tailwind CSS" class="skill-logo"/>
+                        <span>Tailwind CSS</span>
+                    </div>
+                </div>
+
+                <h4>Creative Software</h4>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <img src="https://cdn.simpleicons.org/blender/FFFFFF" alt="Blender" class="skill-logo"/>
+                        <span>Blender</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.simpleicons.org/capcut/FFFFFF" alt="Capcut" class="skill-logo"/>
+                        <span>Capcut</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.simpleicons.org/canva/FFFFFF" alt="Canva" class="skill-logo"/>
+                        <span>Canva</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.simpleicons.org/figma/FFFFFF" alt="Figma" class="skill-logo"/>
+                        <span>Figma</span>
+                    </div>
+                </div>
+
+                <h4>Developer Tools</h4>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <img src="https://cdn.simpleicons.org/visualstudiocode/FFFFFF" alt="VS Code" class="skill-logo"/>
+                        <span>VS Code</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.simpleicons.org/nodedotjs/FFFFFF" alt="Node.js" class="skill-logo"/>
+                        <span>Node.js</span>
+                    </div>
+                </div>
+
+                <h4>AI Tools</h4>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <img src="https://cdn.simpleicons.org/openai/FFFFFF" alt="ChatGPT" class="skill-logo"/>
+                        <span>ChatGPT</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-brain"></i>
+                        <span>Claude</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-cube"></i>
+                        <span>Blackbox</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.simpleicons.org/googlegemini/FFFFFF" alt="Gemini" class="skill-logo"/>
+                        <span>Gemini</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
