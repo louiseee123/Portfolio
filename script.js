@@ -1,22 +1,32 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const fadeInSections = document.querySelectorAll('.fade-in-section');
+    const viewCertButtons = document.querySelectorAll('.view-cert-btn');
+    const modal = document.getElementById('certificate-modal');
+    const iframe = document.getElementById('certificate-iframe');
+    const closeButton = document.querySelector('.close-button');
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                observer.unobserve(entry.target);
-            }
+    viewCertButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const pdfSrc = this.getAttribute('data-pdf-src');
+            iframe.src = pdfSrc;
+            modal.style.display = 'block';
         });
-    }, {
-        threshold: 0.1
     });
 
-    fadeInSections.forEach(section => {
-        observer.observe(section);
+    closeButton.addEventListener('click', function() {
+        modal.style.display = 'none';
+        iframe.src = ''; 
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+            iframe.src = '';
+        }
     });
 });
 function scrollToAbout() {
     const aboutSection = document.getElementById('about');
     aboutSection.scrollIntoView({ behavior: 'smooth' });
 }
+

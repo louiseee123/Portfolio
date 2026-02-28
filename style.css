@@ -1,8 +1,8 @@
+
 /* Dark blue theme styles */
 body {
     background: linear-gradient(to bottom, #0f0f23, #1a1a2e, #16213e, #0f3460);
     color: #ffffff;
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -396,10 +396,7 @@ nav ul li a.glow-underline::after {
     margin-top: 15px;
     position: relative;
     overflow: hidden;
-    z-index: 1;
-}
-
-.hero-button::before {
+    z-.hero-button::before {
     content: '';
     position: absolute;
     top: 0;
@@ -572,4 +569,14 @@ footer {
 .fade-in-section.is-visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+#about {
+    position: relative;
+    z-index: 10;
+    background: rgba(10, 25, 47, 0.95);
+    min-height: 500px;
+    padding: 80px 20px;
+    margin-top: 40px;
+    border-radius: 12px;
 }
