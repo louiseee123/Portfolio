@@ -1,0 +1,162 @@
+/* Documents Section */
+#documents {
+    padding: 60px 20px;
+    background: rgba(10, 25, 47, 0.5);
+    border-radius: 12px;
+    margin-top: 40px;
+    border: 1px solid rgba(122, 162, 247, 0.2);
+}
+
+#documents h2 {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #e0e0ff;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px rgba(122, 162, 247, 0.5);
+}
+
+#documents .section-intro {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    color: #aebce0;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    line-height: 1.7;
+}
+
+.documents-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.document-card {
+    background: rgba(15, 30, 60, 0.7);
+    border-radius: 12px;
+    border: 1px solid rgba(122, 162, 247, 0.3);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.document-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(122, 162, 247, 0.1) 0%, rgba(122, 162, 247, 0) 70%);
+    transition: all 0.6s ease;
+    transform: scale(0);
+    pointer-events: none;
+}
+
+.document-card:hover::before {
+    transform: scale(1);
+}
+
+.document-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    border-color: rgba(122, 162, 247, 0.6);
+}
+
+.document-card .doc-icon {
+    font-size: 3.5rem;
+    color: #7aa2f7;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px rgba(122, 162, 247, 0.7);
+    transition: all 0.3s ease;
+}
+
+.document-card:hover .doc-icon {
+    transform: scale(1.1);
+    text-shadow: 0 0 25px rgba(122, 162, 247, 1);
+    color: #9ab7ff;
+}
+
+.document-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    color: #e0e0ff;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.document-card p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    color: #aebce0;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.doc-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #7aa2f7;
+    color: #0a192f;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.doc-link-btn:hover {
+    background-color: #9ab7ff;
+    box-shadow: 0 8px 20px rgba(122, 162, 247, 0.4);
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.doc-link-btn i {
+    font-size: 1rem;
+}
+
+/* Document buttons container */
+.doc-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.doc-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #documents h2 {
+        font-size: 2rem;
+    }
+    
+    .documents-container {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+    
+    .document-card {
+        padding: 25px 20px;
+    }
+}

@@ -12,17 +12,28 @@
     font-size: 2.5rem;
     text-align: center;
     color: #e0e0ff;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 0 0 15px rgba(122, 162, 247, 0.5);
 }
 
+.certifications-description {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    color: #aebce0;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    line-height: 1.7;
+}
+
 .certifications-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .certification-card {
@@ -98,12 +109,12 @@
 .modal-content {
     position: relative;
     background-color: #0a192f;
-    margin: 5% auto;
+    margin: 8% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
-    max-width: 900px;
-    height: 85%;
+    width: 70%;
+    max-width: 700px;
+    height: 75%;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
@@ -125,7 +136,7 @@
     cursor: pointer;
 }
 
-#certificate-iframe {
+#certificate-embed {
     width: 100%;
     height: 100%;
     border: none;

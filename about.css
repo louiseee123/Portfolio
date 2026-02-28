@@ -5,9 +5,30 @@
 
 .about-name {
     font-family: 'Exo 2', sans-serif;
-    font-size: 2.5rem;
-    color: #e0e0ff;
+    font-size: 3rem;
+    color: #ffffff;
     margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    background: linear-gradient(135deg, #7aa2f7 0%, #e0e0ff 50%, #7aa2f7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px rgba(122, 162, 247, 0.5);
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+.about-name::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #7aa2f7, transparent);
+    border-radius: 2px;
 }
 
 .about-role {
@@ -73,7 +94,7 @@
 }
 
 .education-entry {
-    margin-bottom: 25px;
+    margin-bottom: 35px;
     position: relative;
 }
 
@@ -87,6 +108,15 @@
     border-radius: 50%;
     background: #7aa2f7;
     border: 2px solid #0a192f;
+}
+
+.education-achievements::before {
+    content: '\f005';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: #ffd700;
+    margin-right: 8px;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
 }
 
 .education-date h4 {
