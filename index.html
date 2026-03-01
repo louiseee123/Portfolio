@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Louise' Arsenal</title>
     <script src="script.js" defer></script>
+    <script src="gallery_script.js" defer></script>
     <script src="particles.js" defer></script>
     <script src="background-particles.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="internship.css">
     <link rel="stylesheet" href="certifications.css">
     <link rel="stylesheet" href="documents.css">
+    <link rel="stylesheet" href="declaration.css">
     <link rel="stylesheet" href="contact.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -97,9 +100,15 @@
 <body>
     <nav>
         <img src="./images/logo.png" alt="Logo" id="navbar-logo">
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <ul>
             <li><a href="#" onclick="scrollToAbout(); return false;">About me</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#internship">Internship</a></li>
             <li><a href="#certifications">Certifications</a></li>
             <li><a href="#documents">Documents</a></li>
             <li><a href="#contact">Contact Me</a></li>
@@ -334,6 +343,65 @@
             </div>
         </section>
         
+        <section id="internship">
+            <h2>Internship</h2>
+            <p class="internship-intro">During my On-the-Job Training (OJT), I had the opportunity to work at the City Disaster Risk Reduction and Management Office (CDRRMO) of Toledo City. This experience allowed me to apply my technical skills in a real-world setting while contributing to important community initiatives.</p>
+            
+            <div class="internship-showcase">
+                <div class="internship-tasks">
+                    <div class="task-card">
+                        <i class="fas fa-video"></i>
+                        <h3>Video Editing</h3>
+                        <p>Created and edited videos focused on disaster preparedness and awareness campaigns to educate the community about emergency protocols and safety measures.</p>
+                    </div>
+                    <div class="task-card">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h3>City Map Creation</h3>
+                        <p>Designed and developed a comprehensive map of Toledo City using Adobe Photoshop, highlighting key areas, evacuation routes, and risk zones for disaster management planning.</p>
+                    </div>
+                    <div class="task-card">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>IT Support</h3>
+                        <p>Assisted with various IT-related tasks including computer maintenance, software troubleshooting, data management, and technical support for office operations.</p>
+                    </div>
+                </div>
+                
+                <div class="internship-gallery">
+                    <div class="gallery-container">
+                        <div class="gallery-track">
+                            <div class="gallery-slide">
+                                <img src="images/ojt1.jpg" alt="OJT Experience 1">
+                                <div class="gallery-overlay">
+                                    <h4>Disaster Preparedness Video Production</h4>
+                                </div>
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="images/ojt2.jpg" alt="OJT Experience 2">
+                                <div class="gallery-overlay">
+                                    <h4>Toledo City Map Design</h4>
+                                </div>
+                            </div>
+                            <div class="gallery-slide">
+                                <img src="images/ojt3.jpg" alt="OJT Experience 3">
+                                <div class="gallery-overlay">
+                                    <h4>IT Support & Office Tasks</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-nav">
+                        <button onclick="prevSlide()"><i class="fas fa-chevron-left"></i> Previous</button>
+                        <button onclick="nextSlide()">Next <i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="gallery-dots">
+                        <span class="gallery-dot active" onclick="goToSlide(0)"></span>
+                        <span class="gallery-dot" onclick="goToSlide(1)"></span>
+                        <span class="gallery-dot" onclick="goToSlide(2)"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <section id="certifications">
             <h2>Certifications</h2>
             <p class="certifications-description">These certifications represent my commitment to continuous learning and professional development. Each credential validates my expertise in various technologies and programming languages.</p>
@@ -401,6 +469,56 @@
                         <a href="#" data-pdf-src="files/Louise Resume - 2026.pdf" class="view-cert-btn doc-btn"><i class="fas fa-eye"></i> View</a>
                         <a href="files/Louise Resume - 2026.pdf" download="Louise Resume - 2026.pdf" class="doc-link-btn doc-btn"><i class="fas fa-download"></i> Download</a>
                     </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="declaration" class="fade-in-section">
+            <h2>Declaration</h2>
+            
+            <!-- Stamp/Seal Effect -->
+            <div class="declaration-seal">
+                <i class="fas fa-certificate"></i>
+                <span>Verified</span>
+            </div>
+            
+            <div class="declaration-content">
+                <!-- Verification Badge -->
+                <div class="verification-badge">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Information Verified & Authentic</span>
+                </div>
+                
+                <p class="declaration-text">
+                    I, <strong>John Louise R. Bergabeña</strong>, hereby declare that all information, materials, projects, certifications, and achievements presented in this portfolio website are <strong>true, accurate, and genuine</strong> to the best of my knowledge.
+                </p>
+                <div class="declaration-statement">
+                    "I certify that the information provided in this portfolio is original and accurately represents my skills, experiences, and accomplishments."
+                </div>
+                <p class="declaration-text">
+                    This declaration is made in good faith for the purpose of accurately representing my professional background and capabilities to potential employers, clients, and collaborators.
+                </p>
+                
+                <!-- Checkbox Declaration -->
+                <div class="declaration-checkbox">
+                    <input type="checkbox" id="declaration-confirm" name="declaration-confirm" checked>
+                    <label for="declaration-confirm">I confirm that all information provided in this portfolio is truthful and accurate</label>
+                </div>
+                
+                <!-- Legal Disclaimer -->
+                <div class="declaration-disclaimer">
+                    <div class="declaration-disclaimer-title">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        Legal Disclaimer
+                    </div>
+                    <p>The information contained in this portfolio is provided for informational purposes only. While we strive to keep the information accurate and up-to-date, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the information, products, services, or related graphics contained in this portfolio.</p>
+                </div>
+                
+                <div class="declaration-signature">
+                    Sincerely,
+                    <img src="images/signature.png" alt="Signature" class="declaration-signature-img">
+                    <span>John Louise R. Bergabeña</span>
+                    <div class="signature-line"></div>
                 </div>
             </div>
         </section>

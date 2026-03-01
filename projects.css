@@ -100,3 +100,27 @@
 .project-links i {
     margin-right: 8px;
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    #projects h2 {
+        font-size: 2rem;
+    }
+    
+    .project-intro {
+        font-size: 0.9rem;
+    }
+    
+    .projects-container {
+        justify-content: center;
+    }
+    
+    .project-card {
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    .project-card img {
+        height: 150px;
+    }
+}

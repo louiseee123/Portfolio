@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(element);
     });
 
-viewCertButtons.forEach(button => {
+    viewCertButtons.forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
             const certSrc = this.getAttribute('data-pdf-src');
@@ -48,7 +48,7 @@ viewCertButtons.forEach(button => {
         });
     });
 
-closeButton.addEventListener('click', function() {
+    closeButton.addEventListener('click', function() {
         modal.style.display = 'none';
         document.getElementById('certificate-embed').src = ''; 
     });
@@ -59,26 +59,49 @@ closeButton.addEventListener('click', function() {
             document.getElementById('certificate-embed').src = '';
         }
     });
+
+    // Gallery slider for Internship section
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.gallery-slide');
+    const dots = document.querySelectorAll('.gallery-dot');
+    const totalSlides = slides.length;
+
+    function updateGallery() {
+        const track = document.querySelector('.gallery-track');
+        if (track) {
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+        
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlide);
+        });
+    }
+
+    window.nextSlide = function() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateGallery();
+    };
+
+    window.prevSlide = function() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateGallery();
+    };
+
+    window.goToSlide = function(index) {
+        currentSlide = index;
+        updateGallery();
+    };
+
+    // Auto-advance slides every 5 seconds
+    if (totalSlides > 0) {
+        setInterval(function() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateGallery();
+        }, 5000);
+    }
 });
 
 function scrollToAbout() {
     const aboutSection = document.getElementById('about');
     aboutSection.scrollIntoView({ behavior: 'smooth' });
 }
-
-function toggleMenu() {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('nav ul');
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-}
-
-// Close menu when clicking on a nav link
-document.querySelectorAll('nav ul li a').forEach(link => {
-    link.addEventListener('click', () => {
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('nav ul');
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-    });
-});
