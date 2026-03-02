@@ -7,10 +7,13 @@
     <script src="script.js" defer></script>
     <script src="gallery_script.js" defer></script>
     <script src="particles.js" defer></script>
+    <script src="footer.js" defer></script> 
+    <script src="contact.js" defer></script>  
     <script src="background-particles.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="projects.css">
     <link rel="stylesheet" href="internship.css">
     <link rel="stylesheet" href="certifications.css">
@@ -523,36 +526,205 @@
             </div>
         </section>
         
-        <section id="contact" class="fade-in-section">
-            <h2>Contact Me</h2>
-            <p class="section-intro">Feel free to reach out to me for any inquiries or collaborations!</p>
-            <div class="contact-container">
-                <div class="contact-card">
-                    <i class="fas fa-envelope contact-icon"></i>
-                    <h3>Email</h3>
-                    <p>johnlouisebergs123@gmail.com</p>
-                </div>
-                <div class="contact-card">
-                    <i class="fas fa-phone contact-icon"></i>
-                    <h3>Phone</h3>
-                    <p>09165677786</p>
-                </div>
-                <div class="contact-card">
-                    <i class="fas fa-map-marker-alt contact-icon"></i>
-                    <h3>Location</h3>
-                    <p>Toledo City, Cebu, Philippines</p>
-                </div>
+       <section id="contact" class="fade-in-section">
+    <!-- Decorative Elements -->
+    <div class="contact-decoration">
+        <div class="decoration-circle circle-1"></div>
+        <div class="decoration-circle circle-2"></div>
+    </div>
+
+    <h2>Get In Touch</h2>
+    <p class="section-intro">Have a project in mind or just want to chat? I'd love to hear from you! Drop me a message and I'll get back to you as soon as possible.</p>
+    
+    <!-- Contact Info Cards -->
+    <div class="contact-container">
+        <!-- Email Card -->
+        <div class="contact-card" data-tilt>
+            <i class="fas fa-envelope contact-icon"></i>
+            <h3>Email</h3>
+            <p>johnlouisebergs123<br>@gmail.com</p>
+        </div>
+        
+        <!-- Phone Card -->
+        <div class="contact-card" data-tilt>
+            <i class="fas fa-phone-alt contact-icon"></i>
+            <h3>Phone</h3>
+            <p>+63 916 567 7786</p>
+        </div>
+        
+        <!-- Location Card -->
+        <div class="contact-card" data-tilt>
+            <i class="fas fa-map-marker-alt contact-icon"></i>
+            <h3>Location</h3>
+            <p>Toledo City<br>Cebu, Philippines</p>
+        </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form-container">
+        <h3 class="form-title">Send Me a <span>Message</span></h3>
+        
+        <form id="contact-form" class="contact-form" action="https://formsubmit.co/johnlouisebergs123@gmail.com" method="POST">
+            <!-- FormSubmit.co configuration -->
+            <input type="hidden" name="_subject" value="✨ New Portfolio Message from Website">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html"> <!-- Update this URL -->
+            <input type="hidden" name="_autoresponse" value="Thank you for reaching out! I've received your message and will get back to you within 24-48 hours.">
+            
+            <!-- Name Field -->
+            <div class="form-group">
+                <input type="text" id="name" name="name" placeholder=" " required>
+                <label for="name">Your Name</label>
             </div>
-            <div class="social-links">
-                <a href="https://www.facebook.com/louise.bacus.5" target="_blank" class="social-link"><i class="fab fa-facebook"></i></a>
-                <a href="https://github.com/louiseee123" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="https://www.youtube.com/@JohnLouiseBergabe%C3%B1a" target="_blank" class="social-link"><i class="fab fa-youtube"></i></a>
+            
+            <!-- Email Field -->
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder=" " required>
+                <label for="email">Email Address</label>
             </div>
-        </section>
+            
+            <!-- Subject Field (full width) -->
+            <div class="form-group full-width">
+                <input type="text" id="subject" name="subject" placeholder=" " required>
+                <label for="subject">Subject</label>
+            </div>
+            
+            <!-- Message Field (full width) -->
+            <div class="form-group full-width">
+                <textarea id="message" name="message" placeholder=" " required></textarea>
+                <label for="message">Your Message</label>
+            </div>
+            
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">
+                Send Message <i class="fas fa-paper-plane"></i>
+            </button>
+            
+            <!-- Form Status Message -->
+            <div id="form-status" class="form-status" style="display: none;"></div>
+        </form>
+    </div>
+
+    <!-- Social Links with Tooltips -->
+    <div class="social-links">
+        <a href="https://www.facebook.com/louise.bacus.5" target="_blank" class="social-link" data-tooltip="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://github.com/louiseee123" target="_blank" class="social-link" data-tooltip="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.youtube.com/@JohnLouiseBergabe%C3%B1a" target="_blank" class="social-link" data-tooltip="YouTube">
+            <i class="fab fa-youtube"></i>
+        </a>
+        <a href="mailto:johnlouisebergs123@gmail.com" class="social-link" data-tooltip="Email">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+</section>
     </main>
-    <footer>
-        <p>&copy; 2023 My Website</p>
-    </footer>
+   <footer>
+    <div class="footer-wave"></div>
+    <div class="footer-container">
+        <div class="footer-grid">
+            <!-- Brand Section -->
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="./images/logo.png" alt="Logo" class="footer-logo-img">
+                    <span class="footer-logo-text">Louise' Arsenal</span>
+                </div>
+                <p class="footer-description">
+                    Crafting digital experiences with passion and precision. Transforming ideas into elegant, functional, and innovative web solutions.
+                </p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/louise.bacus.5" target="_blank" class="footer-social-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://github.com/louiseee123" target="_blank" class="footer-social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@JohnLouiseBergabe%C3%B1a" target="_blank" class="footer-social-link">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#internship">Internship</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#documents">Documents</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h3 class="footer-heading">Contact Info</h3>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>johnlouisebergs123@gmail.com</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span>09165677786</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Toledo City, Cebu, Philippines</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div>
+                <h3 class="footer-heading">Stay Updated</h3>
+                <p class="newsletter-text">Subscribe to my newsletter for updates on latest projects and tech insights.</p>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+                    <button type="submit" class="newsletter-button">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                © <span class="current-year">2026</span> Louise' Arsenal. Made by John Louise R. Bergabeña
+            </div>
+            
+            <!-- Stats -->
+            <div class="footer-stats">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="5">5+</div>
+                    <div class="stat-label">Projects</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="8">8+</div>
+                    <div class="stat-label">Certifications</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="100">100%</div>
+                    <div class="stat-label">Satisfaction</div>
+                </div>
+            </div>
+
+            <!-- Legal Links -->
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
     <div id="certificate-modal" class="modal">
         <div class="modal-content">
             <span class="close-button">&times;</span>
