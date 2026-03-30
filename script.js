@@ -1,4 +1,25 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // AR functionality for model-viewer
+    const modelViewer = document.querySelector('model-viewer');
+    const arButton = document.getElementById('ar-button');
+    
+    if (modelViewer && arButton) {
+        modelViewer.addEventListener('ar-status', (event) => {
+            arButton.style.display = event.detail.status === 'session-started' || event.detail.status === 'session-starting' ? 'none' : 'flex';
+        });
+        
+        // Check AR support and show button if supported
+        if (modelViewer.canActivateAR) {
+            arButton.classList.add('ar-supported');
+            arButton.style.display = 'flex';
+            arButton.addEventListener('click', () => {
+                modelViewer.activateAR();
+            });
+        } else {
+            arButton.style.display = 'none';
+        }
+    }
+    
     const viewCertButtons = document.querySelectorAll('.view-cert-btn');
     const modal = document.getElementById('certificate-modal');
     const iframe = document.getElementById('certificate-iframe');
