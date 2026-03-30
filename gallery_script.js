@@ -60,46 +60,48 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Gallery slider for Internship section
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.gallery-slide');
-    const dots = document.querySelectorAll('.gallery-dot');
-    const totalSlides = slides.length;
+// Gallery slider for Internship section
+    let currentInternshipSlide = 0;
+    const internshipSlides = document.querySelectorAll('.gallery-slide');
+    const internshipDots = document.querySelectorAll('.gallery-dot');
+    const internshipTotalSlides = internshipSlides.length;
 
-    function updateGallery() {
+    function updateInternshipGallery() {
         const track = document.querySelector('.gallery-track');
         if (track) {
-            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            track.style.transform = `translateX(-${currentInternshipSlide * 100}%)`;
         }
         
-        dots.forEach((dot, index) => {
-            dot.classList.toggle('active', index === currentSlide);
+        internshipDots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentInternshipSlide);
         });
     }
 
     window.nextSlide = function() {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        updateGallery();
+        currentInternshipSlide = (currentInternshipSlide + 1) % internshipTotalSlides;
+        updateInternshipGallery();
     };
 
     window.prevSlide = function() {
-        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-        updateGallery();
+        currentInternshipSlide = (currentInternshipSlide - 1 + internshipTotalSlides) % internshipTotalSlides;
+        updateInternshipGallery();
     };
 
     window.goToSlide = function(index) {
-        currentSlide = index;
-        updateGallery();
+        currentInternshipSlide = index;
+        updateInternshipGallery();
     };
 
-    // Auto-advance slides every 5 seconds
-    if (totalSlides > 0) {
+    // Auto-advance internship gallery
+    if (internshipTotalSlides > 0) {
         setInterval(function() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            updateGallery();
+            currentInternshipSlide = (currentInternshipSlide + 1) % internshipTotalSlides;
+            updateInternshipGallery();
         }, 5000);
     }
-});
+
+
+
 
 function scrollToAbout() {
     const aboutSection = document.getElementById('about');

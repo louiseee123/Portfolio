@@ -11,12 +11,21 @@
     <script src="contact.js" defer></script>  
     <script src="background-particles.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="importmap">
+    {
+      "imports": {
+        "@google/model-viewer/": "https://cdn.skypack.dev/@google/model-viewer@3.5.0/"
+      }
+    }
+    </script>
+    <script type="module" src="https://cdn.skypack.dev/@google/model-viewer@3.5.0/dist/model-viewer.min.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="projects.css">
     <link rel="stylesheet" href="internship.css">
     <link rel="stylesheet" href="certifications.css">
+    <link rel="stylesheet" href="multimedia.css">
     <link rel="stylesheet" href="documents.css">
     <link rel="stylesheet" href="declaration.css">
     <link rel="stylesheet" href="contact.css">
@@ -112,6 +121,7 @@
             <li><a href="#" onclick="scrollToAbout(); return false;">About me</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#internship">Internship</a></li>
+            <li><a href="#multimedia">Multimedia</a></li>
             <li><a href="#certifications">Certifications</a></li>
             <li><a href="#documents">Documents</a></li>
             <li><a href="#contact">Contact Me</a></li>
@@ -405,7 +415,50 @@
             </div>
         </section>
         
-        <section id="certifications">
+        <section id="multimedia">
+            <h2>Multimedia Showcase</h2>
+            <p class="multimedia-intro">Discover my creative multimedia projects including 3D modeling, image galleries, video edits, and interactive visuals created during my internship and personal projects.</p>
+            
+                <div class="multimedia-showcase">
+                    <!-- Pure 3D Blender Model Viewer -->
+                    <div class="model-viewer-container">
+                        <h3 class="model-title">Absol 3D Model</h3>
+                        <model-viewer 
+src="files/Absol.glb" 
+alt="Absol 3D Model" 
+                            camera-controls 
+                            ar 
+                            auto-rotate
+                            loading="eager"
+                            shadow-intensity="0.8"
+                            exposure="0.8"
+                            camera-orbit="45deg 75deg 105%"
+                            min-camera-orbit="0deg 20deg 50%"
+                            max-camera-orbit="360deg 110deg 150%"
+                            field-of-view="30deg"
+                            style="width: 100%; height: 500px; border-radius: 20px; border: 1px solid rgba(122, 162, 247, 0.3);">
+                            <div slot="error" style="padding: 20px; text-align: center; color: #7aa2f7;">
+                                <i class="fas fa-exclamation-triangle" style="font-size: 3rem; margin-bottom: 10px;"></i>
+                                <p>Model failed to load. <a href="files/Absol.glb" download style="color: #fff; text-decoration: underline;">Download GLB file</a></p>
+                            </div>
+                        </model-viewer>
+                        <div class="model-controls">
+                            <p>Drag to rotate • Scroll to zoom • Right-click & drag to pan • Auto-rotates</p>
+<div class="model-links">
+                            <a href="files/Absol.glb" download class="model-btn">
+                                <i class="fas fa-download"></i> Download .glb
+                            </a>
+                            <button id="ar-button" class="model-btn" style="display: none;">
+                                <i class="fas fa-vr-cardboard"></i> View in AR
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+        </section>
+        
+        <section id="certifications"> 
             <h2>Certifications</h2>
             <p class="certifications-description">These certifications represent my commitment to continuous learning and professional development. Each credential validates my expertise in various technologies and programming languages.</p>
             <div class="certifications-container">
